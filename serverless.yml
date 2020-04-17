@@ -1,0 +1,15 @@
+service: rmcc872-lambda-functions-test
+provider:
+  name: aws
+  runtime: python3.7
+  apiName: my-api-rmcc872
+  stage: dev
+  region: ap-southeast-2
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: users/create
+          method: get
