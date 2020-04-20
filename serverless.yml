@@ -5,7 +5,10 @@ provider:
   apiName: my-api-rmcc872
   stage: dev
   region: ap-southeast-2
-
+package:
+  exclude:
+    - .git/**
+    - .vscode/*
 functions:
   hello:
     handler: handler.hello
